@@ -34,6 +34,7 @@
 *.app
 *.i*86
 *.x86_64
+*.bin
 *.hex
 
 # Debug files
@@ -53,3 +54,8 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# SimulIDE files
+*.simu
+*.sim1
+*.sim2
