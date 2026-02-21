@@ -41,7 +41,7 @@
  * @dot
  * digraph Traffic_Light_FSM {
  *     
- *     rankdir=UD; // Graph Orientation: Left to Right
+ *     rankdir=UD; // Graph Orientation: Up to Down
  *     
  *     // Defining States
  *     IDLE_VEHICLE_GREEN_PEDESTRIAN_RED        [shape=box, style="filled", color=darkgreen];
