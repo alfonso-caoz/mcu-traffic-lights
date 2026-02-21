@@ -1,3 +1,14 @@
+/**
+ * @file fsm.c
+ * @author Alfonso Castillo Orozco
+ * @brief Traffic Light Finite State Machine - Definitions
+ * @version 1.0
+ * @date 2026-02-19
+ * 
+ * @copyright Copyright (c) 2026
+ * 
+ */
+
 #include <avr/io.h>
 #include "fsm.h"
 
@@ -5,6 +16,7 @@ volatile TrafficLightState current_state = IDLE_VEHICLE_GREEN_PEDESTRIAN_RED; //
 volatile TrafficLightState previous_state;
 volatile bool pressed_button = false;
 volatile uint8_t tick_counter = 0;
+
 
 // Function: Traffic Light FSM Next State
 void traffic_light_fsm_next_state(
@@ -21,6 +33,7 @@ void traffic_light_fsm_next_state(
   previous_state = previous_state_param;
 
 }
+
 
 // Function: Traffic Light FSM Execution
 void traffic_light_fsm_execution(void) {

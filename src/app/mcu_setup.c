@@ -1,3 +1,14 @@
+/**
+ * @file mcu_setup.c
+ * @author Alfonso Castillo Orozco
+ * @brief Microcontroller Unit ATtiny4313 Setup - Definitions
+ * @version 1.0
+ * @date 2026-02-19
+ * 
+ * @copyright Copyright (c) 2026
+ * 
+ */
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "mcu_setup.h"
@@ -7,9 +18,9 @@ void mcu_setup(void) {
 
     // Datasheet ATtiny4313 source: https://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf 
 
-    // Port Configuration: LEDs (PORTB): [0 0 0 LDPV LDVD LDPP LDPD 0]
+    // Port Configuration: LEDs (PORTB): [0 0 0 LEDVG LEDVR LEDPG LEDPR 0]
         
-        // Enabling as Outputs: 1 (PB4, PB3, PB2, PB1)=(LDPV, LDVD, LDPP, LDPD). Datasheet page 70.
+        // Enabling as Outputs: 1 (PB4, PB3, PB2, PB1)=(LEDVG, LEDVR, LEDPG, LEDPR). Datasheet page 70.
         DDRB = 0x1E;
 
         // Setting Outputs: To set LEDs as High (1) OR Low (0).  Datasheet page 70.

@@ -1,7 +1,24 @@
+/**
+ * @file mcu_isr.c
+ * @author Alfonso Castillo Orozco
+ * @brief Microcontroller Unit ATtiny4313 Interrupt Service Routine - Definitions
+ * @version 0.1
+ * @date 2026-02-19
+ * 
+ * @copyright Copyright (c) 2026
+ * 
+ */
+
 #include <avr/interrupt.h>
 #include "fsm.h"
 
-// Interrupt Service Routine for INT0: Button B1/B2
+
+/**
+ * @brief Interrupt Service Routine for INT0: Button B1/B2
+ * 
+ * This ISR routine detects when the Button B1/B2 was pressed, and it will set the global variable @ref pressed_button as @p true just if the Current State is @ref IDLE_VEHICLE_GREEN_PEDESTRIAN_RED.
+ * 
+ */
 ISR(INT0_vect) {
 
   /* 
@@ -12,7 +29,18 @@ ISR(INT0_vect) {
 
 }
 
-// Interrupt Service Routine for TIMER0
+
+/**
+ * @brief Interrupt Service Routine for TIMER0
+ * 
+ * This ISR routine implements a tick counter to use it as a timer for every FSM State.
+ * 
+ * Also, this ISR routine checks if the following three conditions were satisfied to move out of the Idle State 0 (@ref IDLE_VEHICLE_GREEN_PEDESTRIAN_RED):
+ *  1. Current State: @ref IDLE_VEHICLE_GREEN_PEDESTRIAN_RED.
+ *  2. Button was pressed during this Current State.
+ *  3. This Current State was active at least 10 seconds before commuting to another state.
+ * 
+ */
 ISR(TIMER0_COMPA_vect) {
 
   ++tick_counter;
