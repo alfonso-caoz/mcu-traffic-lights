@@ -55,8 +55,3 @@ dkms.conf
 
 # debug information files
 *.dwo
-
-# SimulIDE files
-*.simu
-*.sim1
-*.sim2
