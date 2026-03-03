@@ -12,7 +12,9 @@ This project implements a traffic light controller, vehicular and pedestrian, wi
 ![Traffic Light FSM](/docs/html/dot_inline_dotgraph_1.png)
 --->
 <p align="center">
-  <img src="./docs/html/dot_inline_dotgraph_1.png" width="70%" height="70%" />
+ 
+<img src="./docs/html/dot_inline_dotgraph_1.png" width="50%" height="50%" />
+
 </p>
 
 ## Demo with SimulIDE
@@ -21,7 +23,11 @@ This project implements a traffic light controller, vehicular and pedestrian, wi
 [DemoTrafficLight_Google_Drive](https://drive.google.com/file/d/12pSJ2lb11Bx9yfLRGOzRFmk9PFPUq6HW/view?usp=sharing)
 --->
 
+<div align="center">
+ 
+https://github.com/user-attachments/assets/fb6c5a24-524d-4db9-94e6-576a4c2691ae
 
+</div>
 
 ## Pending Work
 
